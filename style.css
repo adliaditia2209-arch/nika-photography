@@ -530,57 +530,55 @@ footer h2 {
    RESPONSIVE — TABLET & MOBILE (<= 768px)
 ================================================= */
 
+/* =================================================
+   RESPONSIVE (MEMPERTAHANKAN TAMPILAN 2 KOLOM)
+================================================= */
+
+/* Paksa layout paket tetap 2 kolom berdampingan */
+.package-content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+}
+
+/* Penyesuaian skala agar pas di HP dan tidak kepotong */
 @media (max-width: 768px) {
 
     section {
-        padding: 70px 5%;
-    }
-
-    .small-title {
-        font-size: 8.5px;
-        letter-spacing: 2px;
+        padding: 50px 3%;
     }
 
     .hero h1 {
         font-size: 38px;
-        letter-spacing: 2px;
     }
 
     .package {
-        padding: 30px 18px;
-    }
-
-    .package-content {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding: 30px 0;
+        padding: 25px 12px;
     }
 
     .package h3 {
-        font-size: 34px;
-        letter-spacing: 2px;
+        font-size: 26px;
     }
 
     .price {
-        font-size: 24px;
+        font-size: 18px;
     }
 
-    .addon {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .booking-box {
-        padding: 30px 18px;
-    }
-
-    footer h2 {
-        font-size: 32px;
+    .package-column h4 {
+        font-size: 8px;
         letter-spacing: 1px;
     }
 
-    .contact {
-        flex-direction: column;
-        gap: 15px;
+    .package-column li {
+        font-size: 9.5px;
+        padding: 4px 0;
+    }
+
+    .booking-box {
+        padding: 25px 15px;
+    }
+
+    footer h2 {
+        font-size: 28px;
     }
 }
