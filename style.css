@@ -1,5 +1,6 @@
+```css
 /* =================================================
-   GLOBAL RESET & BASE
+   GLOBAL
 ================================================= */
 
 * {
@@ -18,8 +19,6 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     line-height: 1.7;
-    overflow-x: hidden; /* Mencegah layar goyang menyamping di HP */
-    width: 100%;
 }
 
 
@@ -29,7 +28,7 @@ body {
 
 .hero {
     min-height: 100vh;
-    width: 100%;
+
     background-image:
         linear-gradient(
             rgba(0, 0, 0, 0.65),
@@ -39,7 +38,6 @@ body {
 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 
     display: flex;
     justify-content: center;
@@ -47,47 +45,51 @@ body {
 
     text-align: center;
     position: relative;
-    padding: 20px;
 }
+
 
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 40px 10px;
-    max-width: 900px;
-    width: 100%;
+
+    padding: 40px 20px;
 }
 
+
 .small-title {
-    font-size: clamp(9px, 1.5vw, 11px);
-    letter-spacing: clamp(3px, 1vw, 6px);
+    font-size: 11px;
+    letter-spacing: 6px;
     margin-bottom: 25px;
 }
 
+
 .hero h1 {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(38px, 9vw, 120px);
+    font-size: clamp(60px, 10vw, 130px);
     font-weight: 300;
-    line-height: 0.95;
-    letter-spacing: clamp(2px, 1vw, 5px);
-    word-break: break-word;
+    line-height: 0.85;
+    letter-spacing: 5px;
 }
+
 
 .line {
     width: 70px;
     height: 1px;
     background: white;
+
     margin: 35px auto;
 }
 
+
 .subtitle {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(18px, 3vw, 24px);
+    font-size: 22px;
     font-style: italic;
 }
 
+
 .year {
-    font-size: clamp(8px, 1.2vw, 10px);
+    font-size: 10px;
     letter-spacing: 5px;
     margin-top: 35px;
 }
@@ -98,24 +100,24 @@ body {
 ================================================= */
 
 section {
-    padding: 100px 8%;
-    width: 100%;
+    padding: 120px 8%;
 }
 
+
 .section-label {
-    font-size: clamp(8px, 1.2vw, 10px);
-    letter-spacing: clamp(3px, 1vw, 5px);
+    font-size: 10px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 20px;
     opacity: 0.6;
 }
 
+
 section h2 {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(32px, 5vw, 70px);
+    font-size: clamp(42px, 6vw, 75px);
     font-weight: 300;
-    line-height: 1.1;
-    word-break: break-word;
+    line-height: 1;
 }
 
 
@@ -129,11 +131,13 @@ section h2 {
     text-align: center;
 }
 
+
 .intro-text {
     max-width: 650px;
-    margin: 30px auto 0;
-    font-size: clamp(13px, 1.5vw, 15px);
-    line-height: 1.9;
+    margin: 40px auto 0;
+
+    font-size: 14px;
+    line-height: 2;
     opacity: 0.65;
 }
 
@@ -147,33 +151,45 @@ section h2 {
     margin: auto;
 }
 
+
 .section-heading {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
+
 
 .package {
     position: relative;
+
     border: 1px solid #2d2d2d;
-    padding: clamp(25px, 5vw, 55px);
+
+    padding: 55px;
+
     margin-bottom: 50px;
+
     transition: 0.4s ease;
 }
+
 
 .package:hover {
     border-color: #777;
     transform: translateY(-5px);
 }
 
+
 .package.featured {
     border-color: #777;
 }
 
+
 .package-header {
     text-align: center;
+
     border-bottom: 1px solid #2b2b2b;
-    padding-bottom: 30px;
+
+    padding-bottom: 40px;
 }
+
 
 .package-number {
     font-family: "Cormorant Garamond", serif;
@@ -181,17 +197,20 @@ section h2 {
     opacity: 0.5;
 }
 
+
 .package h3 {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(32px, 4vw, 50px);
+    font-size: 50px;
     font-weight: 400;
-    letter-spacing: clamp(2px, 0.8vw, 4px);
+    letter-spacing: 4px;
 }
+
 
 .price {
     margin-top: 15px;
+
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(24px, 3vw, 30px);
+    font-size: 30px;
 }
 
 
@@ -201,28 +220,38 @@ section h2 {
 
 .package-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    padding: 40px 0;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    padding: 50px 0;
 }
+
 
 .package-column h4,
 .bonus h4 {
     font-size: 10px;
     letter-spacing: 3px;
+
     margin-bottom: 20px;
+
     opacity: 0.6;
 }
+
 
 .package-column ul {
     list-style: none;
 }
 
+
 .package-column li {
     font-size: 13px;
-    padding: 8px 0;
+
+    padding: 7px 0;
+
     border-bottom: 1px solid #191919;
 }
+
 
 .package-column li::before {
     content: "— ";
@@ -231,46 +260,84 @@ section h2 {
 
 
 /* =================================================
-   BONUS & DELIVERY
+   BONUS
 ================================================= */
 
 .bonus {
     border-top: 1px solid #2d2d2d;
+
     padding-top: 30px;
+
     margin-bottom: 30px;
 }
 
+
 .bonus p {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(16px, 2vw, 19px);
-    line-height: 1.8;
-}
 
-.delivery {
-    border-top: 1px solid #2d2d2d;
-    padding-top: 25px;
-    font-size: 9px;
-    letter-spacing: 2px;
-    opacity: 0.6;
-    word-break: break-word;
+    font-size: 19px;
+
+    line-height: 1.8;
 }
 
 
 /* =================================================
-   POPULAR BADGE
+   DELIVERY
+================================================= */
+
+.delivery {
+    border-top: 1px solid #2d2d2d;
+
+    padding-top: 25px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.6;
+}
+
+
+/* =================================================
+   POPULAR
 ================================================= */
 
 .popular {
     position: absolute;
+
     top: 0;
     left: 50%;
+
     transform: translate(-50%, -50%);
+
     background: #f5f5f5;
+
     color: #111;
-    padding: 8px 20px;
+
+    padding: 8px 25px;
+
     font-size: 8px;
-    letter-spacing: 2px;
+
+    letter-spacing: 3px;
+
     white-space: nowrap;
+}
+
+
+/* =================================================
+   FULL DAY
+================================================= */
+
+.full-day {
+    text-align: center;
+
+    padding: 30px 0;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.7;
 }
 
 
@@ -280,27 +347,37 @@ section h2 {
 
 .addons {
     background: #f2f2f2;
+
     color: #111;
 }
+
 
 .addons .section-label {
     opacity: 0.5;
 }
 
+
 .addon-list {
     max-width: 900px;
-    margin: 50px auto 0;
+
+    margin: 60px auto 0;
 }
+
 
 .addon {
     display: flex;
+
     justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 0;
+
+    gap: 30px;
+
+    padding: 25px 0;
+
     border-bottom: 1px solid #ccc;
+
     font-size: 13px;
 }
+
 
 .addon strong {
     font-weight: 500;
@@ -315,22 +392,32 @@ section h2 {
     text-align: center;
 }
 
+
 .booking-box {
     max-width: 700px;
-    margin: 50px auto 0;
+
+    margin: 60px auto 0;
+
     border: 1px solid #2d2d2d;
-    padding: clamp(25px, 5vw, 50px);
+
+    padding: 50px;
 }
 
+
 .booking-box p {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+
     font-size: 13px;
+
     opacity: 0.7;
 }
 
+
 .booking-box strong {
     font-size: 10px;
+
     letter-spacing: 3px;
+
     opacity: 1;
 }
 
@@ -341,24 +428,33 @@ section h2 {
 
 .terms {
     max-width: 900px;
+
     margin: auto;
 }
 
+
 .terms ul {
-    margin-top: 40px;
+    margin-top: 50px;
+
     list-style: none;
 }
 
+
 .terms li {
     font-size: 12px;
-    padding: 12px 0;
+
+    padding: 15px 0;
+
     border-bottom: 1px solid #222;
+
     opacity: 0.65;
 }
 
+
 .terms li::before {
     content: "•";
-    margin-right: 12px;
+
+    margin-right: 15px;
 }
 
 
@@ -368,87 +464,183 @@ section h2 {
 
 footer {
     text-align: center;
-    padding: 90px 20px 40px;
+
+    padding: 120px 30px 50px;
+
     border-top: 1px solid #222;
 }
 
+
 footer h2 {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(32px, 6vw, 60px);
+
+    font-size: 60px;
+
     font-weight: 300;
-    letter-spacing: clamp(1px, 0.5vw, 3px);
+
+    letter-spacing: 3px;
 }
+
 
 .footer-line {
     width: 50px;
+
     height: 1px;
+
     background: #fff;
-    margin: 25px auto;
+
+    margin: 30px auto;
 }
+
 
 .contact {
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
-    gap: 20px 35px;
-    margin-top: 35px;
+
+    gap: 35px;
+
+    margin-top: 40px;
 }
+
 
 .contact a {
     color: white;
+
     text-decoration: none;
+
     font-size: 10px;
-    letter-spacing: 2px;
+
+    letter-spacing: 3px;
+
     text-transform: uppercase;
+
     transition: 0.3s;
 }
+
 
 .contact a:hover {
     opacity: 0.5;
 }
 
+
 .copyright {
-    margin-top: 60px;
+    margin-top: 70px;
+
     font-size: 8px;
+
     letter-spacing: 2px;
+
     opacity: 0.4;
 }
 
 
 /* =================================================
-   MEDIA QUERIES (RESPONSIVE)
+   RESPONSIVE — TABLET
 ================================================= */
 
-/* Tablet & Mobile (di bawah 800px) */
 @media (max-width: 800px) {
+
     section {
-        padding: 70px 6%;
+        padding: 90px 6%;
     }
+
+
+    .package {
+        padding: 35px 25px;
+    }
+
 
     .package-content {
-        grid-template-columns: 1fr; /* Kolom berubah jadi 1 bersusun ke bawah */
-        gap: 30px;
+        grid-template-columns: 1fr;
+
+        gap: 40px;
     }
+
+
+    .package h3 {
+        font-size: 42px;
+    }
+
 
     .addon {
-        flex-direction: row; /* Tetap sebaris tapi fleksibel */
+        flex-direction: column;
+
+        gap: 5px;
     }
+
 }
 
-/* Mobile Layar Kecil (di bawah 500px) */
+
+/* =================================================
+   RESPONSIVE — MOBILE (FIXED)
+================================================= */
+
+/* Mencegah seluruh halaman jebol ke kanan */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 @media (max-width: 500px) {
+
     section {
         padding: 60px 5%;
     }
 
-    .hero-content {
-        padding: 20px 0;
+    /* Penyesuaian Hero agar tidak memicu zoom-out */
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 55px);
+        letter-spacing: 2px;
     }
 
-    .addon {
-        flex-direction: column; /* Harga turun ke bawah nama servis */
-        align-items: flex-start;
-        gap: 5px;
+    .small-title {
+        font-size: 9px;
+        letter-spacing: 2px; /* Dikecilkan dari 6px agar tidak meluap */
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 34px;
+    }
+
+    /* Penyesuaian Kartu Paket */
+    .package {
+        padding: 30px 18px;
+        margin-bottom: 35px;
+    }
+
+    .package h3 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .package-content {
+        padding: 25px 0;
+        gap: 25px;
+    }
+
+    .booking-box {
+        padding: 30px 15px;
+    }
+
+    /* Penyesuaian Footer */
+    footer {
+        padding: 80px 20px 40px;
+    }
+
+    footer h2 {
+        font-size: 32px;
+        letter-spacing: 1px;
     }
 
     .contact {
