@@ -1,4 +1,3 @@
-```css
 /* =================================================
    GLOBAL
 ================================================= */
@@ -7,6 +6,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 html {
@@ -45,6 +49,7 @@ body {
 
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 
@@ -53,6 +58,7 @@ body {
     z-index: 2;
 
     padding: 40px 20px;
+    width: 100%;
 }
 
 
@@ -60,12 +66,13 @@ body {
     font-size: 11px;
     letter-spacing: 6px;
     margin-bottom: 25px;
+    word-break: break-word;
 }
 
 
 .hero h1 {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(60px, 10vw, 130px);
+    font-size: clamp(40px, 10vw, 130px);
     font-weight: 300;
     line-height: 0.85;
     letter-spacing: 5px;
@@ -101,6 +108,7 @@ body {
 
 section {
     padding: 120px 8%;
+    width: 100%;
 }
 
 
@@ -115,7 +123,7 @@ section {
 
 section h2 {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(42px, 6vw, 75px);
+    font-size: clamp(36px, 6vw, 75px);
     font-weight: 300;
     line-height: 1;
 }
@@ -168,6 +176,7 @@ section h2 {
     margin-bottom: 50px;
 
     transition: 0.4s ease;
+    width: 100%;
 }
 
 
@@ -325,23 +334,6 @@ section h2 {
 
 
 /* =================================================
-   FULL DAY
-================================================= */
-
-.full-day {
-    text-align: center;
-
-    padding: 30px 0;
-
-    font-size: 10px;
-
-    letter-spacing: 4px;
-
-    opacity: 0.7;
-}
-
-
-/* =================================================
    ADDONS
 ================================================= */
 
@@ -452,7 +444,7 @@ section h2 {
 
 
 .terms li::before {
-    content: "•";
+    content: "• ";
 
     margin-right: 15px;
 }
@@ -468,6 +460,7 @@ footer {
     padding: 120px 30px 50px;
 
     border-top: 1px solid #222;
+    width: 100%;
 }
 
 
@@ -479,6 +472,7 @@ footer h2 {
     font-weight: 300;
 
     letter-spacing: 3px;
+    word-wrap: break-word;
 }
 
 
@@ -521,11 +515,6 @@ footer h2 {
 }
 
 
-.contact a:hover {
-    opacity: 0.5;
-}
-
-
 .copyright {
     margin-top: 70px;
 
@@ -538,85 +527,37 @@ footer h2 {
 
 
 /* =================================================
-   RESPONSIVE — TABLET
+   RESPONSIVE — TABLET & MOBILE (<= 768px)
 ================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 
     section {
-        padding: 90px 6%;
-    }
-
-
-    .package {
-        padding: 35px 25px;
-    }
-
-
-    .package-content {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-
-    .package h3 {
-        font-size: 42px;
-    }
-
-
-    .addon {
-        flex-direction: column;
-
-        gap: 5px;
-    }
-
-}
-
-
-/* =================================================
-   RESPONSIVE — MOBILE (FIXED)
-================================================= */
-
-/* Mencegah seluruh halaman jebol ke kanan */
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-@media (max-width: 500px) {
-
-    section {
-        padding: 60px 5%;
-    }
-
-    /* Penyesuaian Hero agar tidak memicu zoom-out */
-    .hero h1 {
-        font-size: clamp(38px, 11vw, 55px);
-        letter-spacing: 2px;
+        padding: 70px 5%;
     }
 
     .small-title {
-        font-size: 9px;
-        letter-spacing: 2px; /* Dikecilkan dari 6px agar tidak meluap */
+        font-size: 8.5px;
+        letter-spacing: 2px;
     }
 
-    .subtitle {
-        font-size: 18px;
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: 2px;
     }
 
-    section h2 {
-        font-size: 34px;
-    }
-
-    /* Penyesuaian Kartu Paket */
     .package {
         padding: 30px 18px;
-        margin-bottom: 35px;
+    }
+
+    .package-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 30px 0;
     }
 
     .package h3 {
-        font-size: 32px;
+        font-size: 34px;
         letter-spacing: 2px;
     }
 
@@ -624,18 +565,13 @@ html, body {
         font-size: 24px;
     }
 
-    .package-content {
-        padding: 25px 0;
-        gap: 25px;
+    .addon {
+        flex-direction: column;
+        gap: 5px;
     }
 
     .booking-box {
-        padding: 30px 15px;
-    }
-
-    /* Penyesuaian Footer */
-    footer {
-        padding: 80px 20px 40px;
+        padding: 30px 18px;
     }
 
     footer h2 {
